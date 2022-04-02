@@ -1,15 +1,18 @@
-package jpabook.jpashop.domain;
+package jpabook.jpashop.domain.item;
 
+import jpabook.jpashop.domain.Item;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue("B")
 @Getter
 @Setter
-public class Book {
+public class Book extends Item {
 
-    private String artist;
-    private String etc;
+    private String director;
+    private String actors;
 }
