@@ -13,6 +13,6 @@ import javax.persistence.Entity;
 @Setter
 public class Book extends Item {
 
-    private String director;
-    private String actors;
+    private String author;
+    private String isbn;
 }
