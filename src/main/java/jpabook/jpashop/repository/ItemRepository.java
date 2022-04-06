@@ -17,7 +17,8 @@ public class ItemRepository {
         if (item.getId() == null) {
             em.persist(item);
         } else {
-            em.merge(item);
+            em.merge(item); // 병합
+            /** 병합은 준영속성 상태의 앤티티를 영속성 상태로 만든다. **/
         }
     }
 
