@@ -7,8 +7,8 @@ spring:
 
   jpa:
     hibernate:
-#      ddl-auto: create
-      ddl-auto: none
+      ddl-auto: create # 서버 시작할 때마다 db 초기화
+#      ddl-auto: none
     properties:
       hibernate:
 #        show_sql: true
