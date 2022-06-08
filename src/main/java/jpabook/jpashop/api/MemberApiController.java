@@ -15,11 +15,8 @@ import java.util.stream.Collectors;
 @RestController
 @RequiredArgsConstructor
 public class MemberApiController {
-
     private final MemberService memberService;
 
-
-    @PostMapping("/api/v1/members")
     public CreateMemberResponse saveMemberV1(@RequestBody @Valid Member member) {
         // 앤티티는 자주 변경된다. 그런데 그 변경으로 인해 api 스펙이 바뀌면 안 된다.
         // api를 만들 때 앤티티를 클라이언트와 주고 받는 파라미터로 받지 말 것!
